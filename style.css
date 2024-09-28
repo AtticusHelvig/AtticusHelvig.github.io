@@ -79,10 +79,9 @@ footer {
 a.button {
     color: #000000;
     text-decoration: none;
-    margin: 40px;
     font-family: "Plus Jakarta Sans","Roboto",-apple-system,"Segoe UI",sans-serif;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     border-radius: 50px;
     border-style: none;
@@ -100,19 +99,23 @@ a.button:hover {
     background-color: #d7a4dd;
 }
 
+a.homeButton {
+    margin:40px;
+}
+
 .projectContainer {
     margin: 50px;
     font-family: "Plus Jakarta Sans";
     background-color: #282828;
-    display: flex-box;
-    width: 30%;
-    border-radius: 25px;
+    max-width: 30%;
+    border-radius: 18px;
 }
 
 .projectTitle {
+    font-size: 17px;
     color: #ffffff;
     font-weight: 800;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 20px;
 }
 
@@ -128,8 +131,17 @@ a.button:hover {
     font-family: "Plus Jakarta Sans";
     font-size: 18px;
     font-weight: 800;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.projectDownload {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #title {
