@@ -76,7 +76,7 @@ footer {
     justify-content: center;
 }
 
-.homeButton {
+a.button {
     color: #000000;
     text-decoration: none;
     margin: 40px;
@@ -96,8 +96,40 @@ footer {
     background-color: #cc8dd4;
 }
 
-.homeButton:hover {
+a.button:hover {
     background-color: #d7a4dd;
+}
+
+.projectContainer {
+    margin: 50px;
+    font-family: "Plus Jakarta Sans";
+    background-color: #282828;
+    display: flex-box;
+    width: 30%;
+    border-radius: 25px;
+}
+
+.projectTitle {
+    color: #ffffff;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.projectDescription {
+    color: #717171;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.projectLinks {
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-weight: 800;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 #title {
