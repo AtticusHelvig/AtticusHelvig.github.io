@@ -1,157 +1,166 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* end of reset */
+
+:root {
+    --dark-100: #121212;
+    --dark-200: #282828;
+    --dark-300: #3f3f3f;
+    --dark-400: #575757;
+    --dark-500: #717171;
+    --dark-600: #8b8b8b;
+    --prim-100: #9c27b0;
+    --prim-200: #a945b9;
+    --prim-300: #b55ec2;
+    --prim-400: #c176cb;
+    --prim-500: #cc8dd4;
+    --prim-600: #d7a4dd;
+}
+
+body {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    color: white;
+    background-color: var(--dark-100);
 }
 
-
-/* Site specific */
-
-body {
-    color: #ffffff;
-    background-color: #121212;
+h1,
+h2,
+h3,
+a {
+    font-family: "Plus Jakarta Sans";
 }
 
 a {
-    color: #cc8dd4;
+    color: var(--prim-500);
+    font-weight: 800;
 }
 
-div {
-    font-family: Consolas;
-    font-size: 1.6vw;
-    letter-spacing: 1px;
-    line-height: 1.5;
+p {
+    font-family: "DM Sans";
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
+h1.intro-header {
+    font-size: 3em;
+    text-align: center;
+    margin: 1em;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
+h2.intro-subheader {
+    text-align: center;
 }
 
 a.button {
-    color: #000000;
     text-decoration: none;
-    font-family: "Plus Jakarta Sans","Roboto",-apple-system,"Segoe UI",sans-serif;
+    color: black;
+    background-color: var(--prim-500);
+    font-size: 0.9em;
     font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 1px;
-    border-radius: 50px;
-    border-style: none;
-    text-transform: inherit;
-    box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
-    transition: all .3s cubic-bezier(.25,.8,.25,1);
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
-    padding: 0.9rem 1rem;
-    background-color: #cc8dd4;
+    letter-spacing: 0.06em;
+    border-radius: 2em;
+    padding: 0.7em 1.5em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 a.button:hover {
-    background-color: #d7a4dd;
+    background-color: var(--prim-600);
 }
 
-a.homeButton {
-    margin:40px;
-}
-
-.projectContainer {
-    margin: 50px;
-    font-family: "Plus Jakarta Sans";
-    background-color: #282828;
-    max-width: 30%;
-    border-radius: 18px;
-}
-
-.projectTitle {
-    font-size: 17px;
-    color: #ffffff;
-    font-weight: 800;
-    padding-top: 15px;
-    padding-left: 20px;
-}
-
-.projectDescription {
-    color: #717171;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.projectLinks {
-    font-family: "Plus Jakarta Sans";
-    font-size: 18px;
-    font-weight: 800;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.projectDownload {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-#title {
-    margin: 3%;
-    padding: 0;
-    font-size: 5vw;
-    padding: 0px;
-}
-
-#homeButtonContainer {
+div.social-buttons {
     display: flex;
     justify-content: center;
+    margin-top: 2em;
+}
+
+div.project-section {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+div.project-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+}
+
+div.card {
+    position: relative;
+    background-color: var(--dark-200);
+    width: 20em;
+    height: 15em;
+    border-radius: 1.2em;
+}
+
+h2.project-title {
+    font-size: 1em;
+    margin-top: 4%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+p.project-description {
+    color: var(--dark-600);
+    font-size: 0.85em;
+    margin-top: 0.4em;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+div.project-links {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1em;
+}
+
+a.project-button {
+    margin-right: 2em;
 }
